@@ -7,8 +7,8 @@ let secondResult = null;
 let movements = 0;
 let hits = 0;
 let timer = false;
-let startTimer = 99;
-let seconds = 99;
+let startTimer = 5;
+let seconds = 5;
 let regresiveTime = null;
 
 let winAudio = new Audio('./assets/sound/win.wav');
@@ -24,6 +24,7 @@ let playingAudio = new Audio('./assets/sound/playing.mp3');
 let showMovements = document.getElementById('movements');
 let showHits = document.getElementById('hits');
 let showTime = document.getElementById('time')
+let showEndMsj = document.getElementById('end-msj')
 
 
 // numbers
@@ -43,8 +44,12 @@ function countTime(){
             blockCards();
             loseAudio.play();
             playingAudio.pause();
+            showHits.innerHTML = ``;
+            showMovements.innerHTML = ``;
+            showTime.innerHTML = ``;
+            showEndMsj.innerHTML = `LOSER! YOR MAKE BAD HITS WITH BAD MOV IN A LOT OF SECONDS!`;
         }
-    }, 1500)
+    }, 1250)
 }
 function blockCards(){
     for (let i = 0; i <= 29; i++){
@@ -111,12 +116,13 @@ function uncover(id){
             }, 500)
         }
     };
-    if(hits == 16){
+    if(hits == 15){
         winAudio.play();
         playingAudio.pause();
         clearInterval(regresiveTime);
-        showHits.innerHTML = `HITS ${hits} 😱`;
-        showTime.innerHTML = `PERFECT, YOUR TIME IS ${startTimer - seconds} SECONDS!`;
-        showMovements.innerHTML = `MOV ${movements} 😎`;
+        showTime.innerHTML = ``;
+        showHits.innerHTML = ``;
+        showMovements.innerHTML = ``;
+        showEndMsj.innerHTML = `WINNER! YOR MAKE ${hits} HITS WITH ${movements} MOV IN ${startTimer - seconds} SECONDS!`;
     }
 }
