@@ -3,7 +3,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>MEMOGI by Joaquin Metayer</title>
+    <meta name="description" content="MEMOGI, The hardest memory card game you've ever played.">
     <link rel="stylesheet" href="./assets/style/style.css">
     <link rel="shortcut icon" href="./assets/img/10.png" type="image/x-icon">
 
@@ -14,14 +16,15 @@
 
 </head>
 <body>
-    <main>
+    <div class="hero-main">
+        <!-- hero only screen -700px -->
         <div class="small-screen">
             <img class="logo" src="./assets/img/24.png">
             <h1>MemoGI</h1>
             <p class="ups">UPSSS</p>
             <p class="ups-explain">Your screen is less than 700px, please enlarge or enter from the computer to play!</p>
-
         </div>
+        <!-- hero main -->
         <div class="hero">
             <div>
                 <img class="logo" src="./assets/img/30.png">
@@ -33,69 +36,80 @@
             <h2 class="ready">do you think you can win?</h2>
             <a class="start" href="#game" id="start" onclick="startSound()">play game</a>
         </div>
-    </main>
-    <div id="game">
-                <!-- game -->
-                <div>
-                    <p class="tap">tap card to start</p>
-                    <p class="find">find all card pairs for win</p>
-                    <section id="section01">
-                        <table>
-                            <tr>
-                                <td><button id="0" onclick="uncover(0)"></button></td>
-                                <td><button id="1" onclick="uncover(1)"></button></td>
-                                <td><button id="2" onclick="uncover(2)"></button></td>
-                                <td><button id="3" onclick="uncover(3)"></button></td>
-                                <td><button id="4" onclick="uncover(4)"></button></td>
-                                <td><button id="5" onclick="uncover(5)"></button></td>
-                            </tr>
-                            <tr>
-                                <td><button id="6" onclick="uncover(6)"></button></td>
-                                <td><button id="7" onclick="uncover(7)"></button></td>
-                                <td><button id="8" onclick="uncover(8)"></button></td>
-                                <td><button id="9" onclick="uncover(9)"></button></td>
-                                <td><button id="10" onclick="uncover(10)"></button></td>
-                                <td><button id="11" onclick="uncover(11)"></button></td>
-                            </tr>
-                            <tr>
-                                <td><button id="12" onclick="uncover(12)"></button></td>
-                                <td><button id="13" onclick="uncover(13)"></button></td>
-                                <td><button id="14" onclick="uncover(14)"></button></td>
-                                <td><button id="15" onclick="uncover(15)"></button></td>
-                                <td><button id="16" onclick="uncover(16)"></button></td>
-                                <td><button id="17" onclick="uncover(17)"></button></td>
-                            </tr>
-                            <tr>
-                                <td><button id="18" onclick="uncover(18)"></button></td>
-                                <td><button id="19" onclick="uncover(19)"></button></td>
-                                <td><button id="20" onclick="uncover(20)"></button></td>
-                                <td><button id="21" onclick="uncover(21)"></button></td>
-                                <td><button id="22" onclick="uncover(22)"></button></td>
-                                <td><button id="23" onclick="uncover(23)"></button></td>
-                            </tr>
-                            <tr>
-                                <td><button id="24" onclick="uncover(24)"></button></td>
-                                <td><button id="25" onclick="uncover(25)"></button></td>
-                                <td><button id="26" onclick="uncover(26)"></button></td>
-                                <td><button id="27" onclick="uncover(27)"></button></td>
-                                <td><button id="28" onclick="uncover(28)"></button></td>
-                                <td><button id="29" onclick="uncover(29)"></button></td>
-                            </tr>
-                        </table>
-                    </section>
-                </div>
-                <!-- stats game -->
-                <section class="section02">
-                    <div>
-                        <h3 id="hits" class="stats">HITS 0</h3>
-                        <h3 id="movements" class="stats">MOV 0</h3>
-                        <h3 id="time" class="stats">TIM 99</h3>
-                    </div>
-                    <span id="end-msj"></span>
-                    <span id="restart-game"></span>
-                </section>
     </div>
+    <div id="game">
+        <div>
+            <p class="tap">tap card to start</p>
+            <p class="find">find all card pairs for win</p>
+    <!-- game -->
+            <section id="section01">
+                <table>
+                    <tr>
+                        <td><button id="0" onclick="uncover(0)"></button></td>
+                        <td><button id="1" onclick="uncover(1)"></button></td>
+                        <td><button id="2" onclick="uncover(2)"></button></td>
+                        <td><button id="3" onclick="uncover(3)"></button></td>
+                        <td><button id="4" onclick="uncover(4)"></button></td>
+                        <td><button id="5" onclick="uncover(5)"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="6" onclick="uncover(6)"></button></td>
+                        <td><button id="7" onclick="uncover(7)"></button></td>
+                        <td><button id="8" onclick="uncover(8)"></button></td>
+                        <td><button id="9" onclick="uncover(9)"></button></td>
+                        <td><button id="10" onclick="uncover(10)"></button></td>
+                        <td><button id="11" onclick="uncover(11)"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="12" onclick="uncover(12)"></button></td>
+                        <td><button id="13" onclick="uncover(13)"></button></td>
+                        <td><button id="14" onclick="uncover(14)"></button></td>
+                        <td><button id="15" onclick="uncover(15)"></button></td>
+                        <td><button id="16" onclick="uncover(16)"></button></td>
+                        <td><button id="17" onclick="uncover(17)"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="18" onclick="uncover(18)"></button></td>
+                        <td><button id="19" onclick="uncover(19)"></button></td>
+                        <td><button id="20" onclick="uncover(20)"></button></td>
+                        <td><button id="21" onclick="uncover(21)"></button></td>
+                        <td><button id="22" onclick="uncover(22)"></button></td>
+                        <td><button id="23" onclick="uncover(23)"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="24" onclick="uncover(24)"></button></td>
+                        <td><button id="25" onclick="uncover(25)"></button></td>
+                        <td><button id="26" onclick="uncover(26)"></button></td>
+                        <td><button id="27" onclick="uncover(27)"></button></td>
+                        <td><button id="28" onclick="uncover(28)"></button></td>
+                        <td><button id="29" onclick="uncover(29)"></button></td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+        <!-- stats game -->
+        <section class="section02">
+            <div>
+                <h3 id="hits" class="stats">HITS 0</h3>
+                <h3 id="movements" class="stats">MOV 0</h3>
+                <h3 id="time" class="stats">TIM 99</h3>
+            </div>
+            <span id="end-msj"></span>
+            <span id="restart-game"></span>
+        </section>
+    </div>
+    <!-- end game thanks -->
     <div class="end">
+        <div>
+            <img class="logo" src="./assets/img/1.png">
+            <img class="logo" src="./assets/img/2.png">
+            <img class="logo" src="./assets/img/3.png">
+            <img class="logo" src="./assets/img/4.png">
+            <img class="logo" src="./assets/img/5.png">
+            <img class="logo" src="./assets/img/6.png">
+            <img class="logo" src="./assets/img/7.png">
+            <img class="logo" src="./assets/img/8.png">
+        </div>
         <p class="thanks">Thanks for playing!</p>
         <div>
             <img class="logo" src="./assets/img/19.png">
@@ -110,7 +124,18 @@
         <footer>
             <span>Made by <a href="www.joaquinmetayer.com" target="_blank">Joaquin Metayer</a> in 2022 - See code <a href="https://github.com/joaquinmetayer/memogi" target="_blank">here</a></span>
         </footer>
+        <div>
+            <img class="logo" src="./assets/img/9.png">
+            <img class="logo" src="./assets/img/10.png">
+            <img class="logo" src="./assets/img/11.png">
+            <img class="logo" src="./assets/img/12.png">
+            <img class="logo" src="./assets/img/13.png">
+            <img class="logo" src="./assets/img/14.png">
+            <img class="logo" src="./assets/img/15.png">
+            <img class="logo" src="./assets/img/17.png">
+        </div>
     </div>
+    <!-- js -->
     <script src="./assets/js/game.js"></script>
 </body>
 </html>

@@ -16,14 +16,6 @@ body {
   color: #fff;
 }
 
-main {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 img {
   width: 100%;
 }
@@ -125,6 +117,14 @@ button {
 .find {
   font-size: 30px;
   padding-bottom: 10px;
+}
+
+.hero-main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .hero {

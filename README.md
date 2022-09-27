@@ -13,3 +13,5 @@ Include sounds... play and view all functions here https://memogi.netlify.app/
 <img  src="./assets/readme/04.png">
 
 <img  src="./assets/readme/05.png">
+
+<img src="./assets/readme/diagram.png">

@@ -11,15 +11,14 @@ let startTimer = 99;
 let seconds = 99;
 let regresiveTime = null;
 
+// audios
 let winAudio = new Audio('./assets/sound/win.wav');
 let loseAudio = new Audio('./assets/sound/lose.wav');
 let clickAudio = new Audio('./assets/sound/click.wav');
 let rightAudio = new Audio('./assets/sound/right.wav');
 let wrongAudio = new Audio('./assets/sound/wrong.wav');
 let timeAudio = new Audio('./assets/sound/time.wav');
-
 let playingAudio = new Audio('./assets/sound/playing.mp3');
-
 let startSoundAudio = new Audio('./assets/sound/start.wav');
 
 // a document html
@@ -82,25 +81,25 @@ function uncover(id){
     console.log(`HEEEE, WHAT DO YOU SEE? PLAY THE GAME 👀`);
 
     if(cardsUncovers == 1){
-        // show first number
+        // show first card
         card01 = document.getElementById(id);
         firstResult = numbers[id];
         card01.innerHTML = `<img src="./assets/img/${firstResult}.png">`;
 
         clickAudio.play();
 
-        // disable first button
+        // disable first card
         card01.disabled = true;
     }else if(cardsUncovers == 2){
-        // show second number
+        // show second card
         card02 = document.getElementById(id);
         secondResult = numbers[id];
         card02.innerHTML = `<img src="./assets/img/${secondResult}.png">`;
 
-        // disable second button
+        // disable second cards
         card02.disabled = true;
 
-        // add movements
+        // add movements in counter
         movements++;
         showMovements.innerHTML = `MOV ${movements}`;
 
