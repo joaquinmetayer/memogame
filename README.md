@@ -4,6 +4,8 @@ Memory cards game using HTML, CSS with SASS and Vanilla JS.
 
 Include sounds... play and view all functions here https://memogi.netlify.app/
 
+Diagram of code in the end.
+
 <img  src="./assets/readme/01.png">
 
 <img  src="./assets/readme/02.png">
