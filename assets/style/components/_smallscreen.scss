@@ -1,0 +1,32 @@
+.small-screen{
+    display: none;
+    padding: 20px;
+}
+.small-screen h1{
+    padding-top: 10px;
+    font-size: 60px;
+}
+.ups{
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 70px;
+    padding-bottom: 15px;
+}
+.ups-explain{
+    font-size: 22.5px;
+}
+
+@media screen and (max-width: 700px) {
+    .hero, #game, .end{
+        display: none;
+    }
+    body{
+        padding: 0;
+    }
+    .small-screen{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}

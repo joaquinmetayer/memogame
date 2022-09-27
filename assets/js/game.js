@@ -79,7 +79,7 @@ function uncover(id){
     };
 
     cardsUncovers++;
-    console.log(cardsUncovers);
+    console.log(`HEEEE, WHAT DO YOU SEE? PLAY THE GAME 👀`);
 
     if(cardsUncovers == 1){
         // show first number
