@@ -31,7 +31,8 @@ a {
 
 footer {
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+  font-size: 16.5px;
 }
 
 #game {
@@ -40,6 +41,7 @@ footer {
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
+  padding: 20px;
 }
 
 #section01 {
@@ -146,4 +148,18 @@ button {
 
 .start:hover {
   color: #8fceff;
+}
+
+.end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-weight: bold;
+}
+
+.thanks {
+  font-size: 41px;
+  padding: 20px;
 }/*# sourceMappingURL=style.css.map */

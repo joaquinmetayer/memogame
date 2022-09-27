@@ -27,6 +27,7 @@ let showMovements = document.getElementById('movements');
 let showHits = document.getElementById('hits');
 let showTime = document.getElementById('time')
 let showEndMsj = document.getElementById('end-msj')
+let resetButton = document.getElementById('restart-game')
 
 // numbers
 let numbers = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,14];
@@ -49,7 +50,7 @@ function countTime(){
             showMovements.innerHTML = ``;
             showTime.innerHTML = ``;
             showEndMsj.innerHTML = `<span class="end-msj-looser">GOOD LOSER!</span>`;
-            resetButton.innerHTML = `<a class="reset-msj" onClick="window.location.reload(true)"
+            resetButton.innerHTML = `<a class="reset-msj" onClick="buttonRestartAction()"
             >Restart</a>`; 
         }
     }, 1250)
@@ -63,6 +64,10 @@ function blockCards(){
 }
 function startSound(){
     startSoundAudio.play();
+}
+function buttonRestartAction(){
+    startSoundAudio.play();
+    window.location.reload(true)
 }
 
 // principal function
