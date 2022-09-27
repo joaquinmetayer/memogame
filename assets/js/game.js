@@ -7,8 +7,8 @@ let secondResult = null;
 let movements = 0;
 let hits = 0;
 let timer = false;
-let startTimer = 5;
-let seconds = 5;
+let startTimer = 99;
+let seconds = 99;
 let regresiveTime = null;
 
 let winAudio = new Audio('./assets/sound/win.wav');
@@ -20,12 +20,13 @@ let timeAudio = new Audio('./assets/sound/time.wav');
 
 let playingAudio = new Audio('./assets/sound/playing.mp3');
 
+let startSoundAudio = new Audio('./assets/sound/start.wav');
+
 // a document html
 let showMovements = document.getElementById('movements');
 let showHits = document.getElementById('hits');
 let showTime = document.getElementById('time')
 let showEndMsj = document.getElementById('end-msj')
-
 
 // numbers
 let numbers = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,14];
@@ -47,7 +48,9 @@ function countTime(){
             showHits.innerHTML = ``;
             showMovements.innerHTML = ``;
             showTime.innerHTML = ``;
-            showEndMsj.innerHTML = `LOSER! YOR MAKE BAD HITS WITH BAD MOV IN A LOT OF SECONDS!`;
+            showEndMsj.innerHTML = `<span class="end-msj-looser">GOOD LOSER!</span>`;
+            resetButton.innerHTML = `<a class="reset-msj" onClick="window.location.reload(true)"
+            >Restart</a>`; 
         }
     }, 1250)
 }
@@ -57,6 +60,9 @@ function blockCards(){
         cardBlock.innerHTML = `<img src="./assets/img/${numbers[i]}.png">`;
         cardBlock.disabled = true;
     }
+}
+function startSound(){
+    startSoundAudio.play();
 }
 
 // principal function
@@ -123,6 +129,9 @@ function uncover(id){
         showTime.innerHTML = ``;
         showHits.innerHTML = ``;
         showMovements.innerHTML = ``;
-        showEndMsj.innerHTML = `WINNER! YOR MAKE ${hits} HITS WITH ${movements} MOV IN ${startTimer - seconds} SECONDS!`;
+        showEndMsj.innerHTML = `<span class="end-msj-winner">BAD WINNER!</span>
+                                <p class="end-msj-stats">YOR MAKE ${hits} HITS WITH ${movements} MOV IN ${startTimer - seconds} SECONDS!</p>`;
+        resetButton.innerHTML = `<a class="reset-msj" onClick="window.location.reload(true)">Restart</a>`; 
+
     }
 }

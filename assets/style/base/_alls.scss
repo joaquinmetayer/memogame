@@ -1,0 +1,26 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Silkscreen';
+    text-align: center;
+    scroll-behavior: smooth;
+}
+body{
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+}
+main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: #45aeff;
+}

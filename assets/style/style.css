@@ -1,0 +1,149 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: "Silkscreen";
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #45aeff;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+}
+
+#game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#section01 {
+  border-radius: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 7.5px;
+  background-color: #ffffff;
+}
+
+.end-msj-looser {
+  font-size: 40px;
+  font-weight: bold;
+  color: red;
+}
+
+.end-msj-winner {
+  font-size: 40px;
+  font-weight: bold;
+  color: green;
+}
+
+.end-msj-stats {
+  width: 550px;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+button {
+  height: 80px;
+  width: 80px;
+  margin: 2px;
+  padding: 15px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(198, 198, 198, 0.5058823529);
+}
+
+.section02 {
+  padding-top: 7.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section02 div {
+  display: flex;
+  gap: 40px;
+  font-size: 30px;
+}
+
+.reset-msj {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ff21ac;
+  cursor: pointer;
+}
+
+.reset-msj:hover {
+  color: #ff7fd0;
+}
+
+.tap {
+  font-size: 47px;
+  color: #ff21ac;
+}
+
+.find {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.hero {
+  padding: 10px;
+}
+
+.hero h1 {
+  font-size: 90px;
+  padding-bottom: 10px;
+}
+
+.logo {
+  width: 70px;
+}
+
+.ready {
+  padding: 10px;
+  font-size: 30px;
+}
+
+.start {
+  padding: 15px;
+  font-size: 63.5px;
+}
+
+.start:hover {
+  color: #8fceff;
+}/*# sourceMappingURL=style.css.map */
