@@ -53,7 +53,7 @@ function countTime(){
             resetButton.innerHTML = `<a class="reset-msj" onClick="buttonRestartAction()"
             >Restart</a>`; 
         }
-    }, 1250)
+    }, 1100)
 }
 function blockCards(){
     for (let i = 0; i <= 29; i++){
