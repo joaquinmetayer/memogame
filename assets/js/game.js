@@ -49,8 +49,7 @@ function countTime(){
             showMovements.innerHTML = ``;
             showTime.innerHTML = ``;
             showEndMsj.innerHTML = `<span class="end-msj-looser">GOOD LOSER!</span>`;
-            resetButton.innerHTML = `<a class="reset-msj" onClick="buttonRestartAction()"
-            >Restart</a>`; 
+            resetButton.innerHTML = `<a class="reset-msj" onClick="buttonRestartAction()">Restart</a>`; 
         }
     }, 1100)
 }
@@ -72,12 +71,15 @@ function buttonRestartAction(){
 // principal function
 function uncover(id){
 
+    // starting timer
     if(timer == false){
         countTime();
         timer = true;
     };
 
+    // count cards
     cardsUncovers++;
+    // funni print in console
     console.log(`HEEEE, WHAT DO YOU SEE? PLAY THE GAME 👀`);
 
     if(cardsUncovers == 1){
@@ -103,6 +105,7 @@ function uncover(id){
         movements++;
         showMovements.innerHTML = `MOV ${movements}`;
 
+        // comparing cards for mach
         if(firstResult == secondResult){
             // to cero cards uncover
             cardsUncovers = 0;
@@ -126,6 +129,7 @@ function uncover(id){
             }, 500)
         }
     };
+    // winner message
     if(hits == 15){
         winAudio.play();
         playingAudio.pause();
