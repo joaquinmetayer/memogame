@@ -8,7 +8,7 @@ let movements = 0;
 let hits = 0;
 let timer = false;
 let startTimer = 99;
-let seconds = 5;
+let seconds = 99;
 let regresiveTime = null;
 
 // audios
@@ -120,7 +120,6 @@ function uncover(id) {
       wrongAudio.play();
 
       // show timeout
-      if(timer == true){
         setTimeout(() => {
           card01.innerHTML = " ";
           card02.innerHTML = " ";
@@ -128,7 +127,6 @@ function uncover(id) {
           card02.disabled = false;
           cardsUncovers = 0;
         }, 500);
-      }
     }
   }
   // winner message
@@ -140,9 +138,7 @@ function uncover(id) {
     showHits.innerHTML = ``;
     showMovements.innerHTML = ``;
     showEndMsj.innerHTML = `<span class="end-msj-winner">BAD WINNER!</span>
-                                <p class="end-msj-stats">YOR MAKE ${hits} HITS WITH ${movements} MOV IN ${
-      startTimer - seconds
-    } SECONDS!</p>`;
+                                <p class="end-msj-stats">YOR MAKE ${hits} HITS WITH ${movements} MOV IN ${startTimer - seconds} SECONDS!</p>`;
     resetButton.innerHTML = `<a class="reset-msj" onClick="window.location.reload(true)">Restart</a>`;
   }
 }
@@ -171,7 +167,6 @@ function countTime() {
   }, 1100);
 }
 function blockCards() {
-
   for (let i = 0; i <= 29; i++) {
     let cardBlock = document.getElementById(i);
     cardBlock.disabled = true;
