@@ -62,8 +62,7 @@ document.getElementById("29").onclick = () => uncover(29);
 
 // numbers
 let numbers = [
-  0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11,
-  12, 12, 13, 13, 14, 14,
+  0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14,
 ];
 numbers = numbers.sort(() => {
   return Math.random() - 0.5;
@@ -120,13 +119,13 @@ function uncover(id) {
       wrongAudio.play();
 
       // show timeout
-        setTimeout(() => {
-          card01.innerHTML = " ";
-          card02.innerHTML = " ";
-          card01.disabled = false;
-          card02.disabled = false;
-          cardsUncovers = 0;
-        }, 500);
+      setTimeout(() => {
+        card01.innerHTML = " ";
+        card02.innerHTML = " ";
+        card01.disabled = false;
+        card02.disabled = false;
+        cardsUncovers = 0;
+      }, 500);
     }
   }
   // winner message
